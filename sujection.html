@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sujection Section</title>
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .heading-section{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .heading-section .text-div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 1rem;
+        }
+
+        .text-div h1{
+            font-size: 60px;
+        }
+
+        .text-div p{
+            font-size: 20px;
+        }
+
+        .heading-section .input-section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .input-section #userInput{
+            width: 450px;
+            padding: 1rem 2rem;
+            font-size: 18px;
+            border-radius: 10px;
+            outline: none;
+            border: 1px solid black;
+            color: black;
+        }
+
+        .input-section #seachBtn{
+            appearance: none;
+            background-color: transparent;
+            border: 0.125em solid #1A1A1A;
+            border-radius: 0.9375em;
+            box-sizing: border-box;
+            color: #3B3B3B;
+            cursor: pointer;
+            display: inline-block;
+            font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+            font-size: 16px;
+            font-weight: 600;
+            line-height: normal;
+            margin: 0;
+            min-height: 3.75em;
+            min-width: 0;
+            outline: none;
+            padding: 1em 2.3em;
+            text-align: center;
+            text-decoration: none;
+            transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            will-change: transform;
+}
+
+         #seachBtn:disabled {
+             pointer-events: none;
+}
+
+#seachBtn:hover {
+ color: #fff;
+ background-color: #1A1A1A;
+ box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+ transform: translateY(-2px);
+}
+
+#seachBtn:active {
+ box-shadow: none;
+ transform: translateY(0);
+}
+
+    </style>
+</head>
+<body>
+
+    <section class="heading-section">
+
+    <div class="text-div">
+
+    <h1>“Not sure what to wear? </h1>
+    <p>
+        Explore trending outfits, fresh styles, and handpicked 
+        looks made just for you. Start searching and upgrade 
+        your vibe instantly.”
+    </p>
+
+    </div>
+
+        <div class="input-section">
+              <input id="userInput" type="text" placeholder="Enter your event, and get clothing suggestions">
+              <button id="seachBtn">Search</button>
+        </div>
+    </section>
+
+    <div class="result">
+
+    </div>
+    <img src= alt="">
+
+    <script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const clothSearch = document.getElementById("userInput");
+    const seachBtn = document.getElementById("seachBtn");
+    const resultDiv = document.querySelector(".result");
+
+    const data = {
+    "casual": [
+      {"title": "Oversized T-shirt with jeans", "category": "casual", "image": "https://source.unsplash.com/300x300/?casual,men,1"},
+      {"title": "Cargo pants with hoodie", "category": "casual", "image": "https://source.unsplash.com/300x300/?casual,men,2"},
+      {"title": "Denim jacket with white tee", "category": "casual", "image": "https://source.unsplash.com/300x300/?casual,men,3"},
+      {"title": "Checked shirt with black jeans", "category": "casual", "image": "https://source.unsplash.com/300x300/?casual,men,4"},
+      {"title": "Joggers with sweatshirt", "category": "casual", "image": "https://source.unsplash.com/300x300/?casual,men,5"},
+      {"title": "Graphic t-shirt with shorts", "category": "casual", "image": "https://source.unsplash.com/300x300/?casual,men,6"},
+      {"title": "Polo t-shirt with chinos", "category": "casual", "image": "https://source.unsplash.com/300x300/?casual,men,7"},
+      {"title": "Half sleeve shirt with jeans", "category": "casual", "image": "https://source.unsplash.com/300x300/?casual,men,8"},
+      {"title": "Tank top with joggers", "category": "casual", "image": "https://source.unsplash.com/300x300/?casual,men,9"},
+      {"title": "Loose fit shirt with denim", "category": "casual", "image": "https://source.unsplash.com/300x300/?casual,men,10"}
+    ],
+
+    "formal": [
+      {"title": "White shirt with black trousers", "category": "formal", "image":  "./images/Clothes/traditional/c6.jpg"},
+      {"title": "Blue shirt with grey pants", "category": "formal", "image": "./images/Clothes/traditional/c6.jpg"},
+      {"title": "Blazer with formal pants", "category": "formal", "image": "./images/Clothes/traditional/c6.jpg"},
+      {"title": "Suit with tie", "category": "formal", "image": "./images/Clothes/traditional/c6.jpg"},
+      {"title": "Plain shirt with chinos", "category": "formal", "image":  "./images/Clothes/traditional/c6.jpg"},
+      {"title": "Black suit with white shirt", "category": "formal", "image": "./images/Clothes/traditional/c6.jpg"},
+      {"title": "Grey blazer with turtleneck", "category": "formal", "image":  "./images/Clothes/traditional/c6.jpg"},
+      {"title": "Striped shirt with trousers", "category": "formal", "image": "./images/Clothes/traditional/c6.jpg"},
+      {"title": "Formal vest with shirt", "category": "formal", "image":  "./images/Clothes/traditional/c6.jpg"},
+      {"title": "Office wear suit", "category": "formal", "image":  "./images/Clothes/traditional/c6.jpg"}
+    ],
+
+    "party": [
+      {"title": "Black shirt with ripped jeans", "category": "party", "image": "./images/Clothes/sports/c11.jpg"},
+      {"title": "Leather jacket with t-shirt", "category": "party", "image":"./images/Clothes/sports/c11.jpg"},
+      {"title": "Shiny shirt with slim pants", "category": "party", "image": "./images/Clothes/sports/c11.jpg"},
+      {"title": "All black outfit", "category": "party", "image": "./images/Clothes/sports/c11.jpg"},
+      {"title": "Printed shirt with white pants", "category": "party", "image": "./images/Clothes/sports/c11.jpg"},
+      {"title": "Denim jacket with black jeans", "category": "party", "image": "./images/Clothes/sports/c11.jpg"},
+      {"title": "Stylish blazer with jeans", "category": "party", "image": "./images/Clothes/sports/c11.jpg"},
+      {"title": "Party wear kurta", "category": "party", "image": "./images/Clothes/sports/c11.jpg"},
+      {"title": "Velvet blazer look", "category": "party", "image": "./images/Clothes/sports/c11.jpg"},
+      {"title": "Night party outfit", "category": "party", "image": "./images/Clothes/sports/c11.jpg"}
+    ],
+
+    "sports": [
+      {"title": "Tracksuit with sneakers", "category": "sports", "image":"./images/Clothes/sports/c11.jpg"},
+      {"title": "Gym wear t-shirt with shorts", "category": "sports", "image": "./images/Clothes/sports/c12.jpg"},
+      {"title": "Running outfit", "category": "sports", "image":"./images/Clothes/sports/c13.jpg"},
+      {"title": "Sleeveless gym wear", "category": "sports", "image": "./images/Clothes/sports/c14.jpg"},
+      {"title": "Football jersey with shorts", "category": "sports", "image": "./images/Clothes/sports/c15.jpg"},
+      {"title": "Cricket jersey with track pants", "category": "sports", "image": "./images/Clothes/sports/c16.jpg"},
+      {"title": "Workout hoodie", "category": "sports", "image":"./images/Clothes/sports/c17.jpg"},
+      {"title": "Training outfit", "category": "sports", "image":"./images/Clothes/sports/c18.jpg"},
+      {"title": "Athleisure wear", "category": "sports", "image": "./images/Clothes/sports/c19.jpg"},
+      {"title": "Jogging suit", "category": "sports", "image": "./images/Clothes/sports/c20.jpg"}
+    ],
+
+    "traditional": [
+      {"title": "Kurta pajama", "category": "traditional", "image": "./images/Clothes/traditional/c1.jpg"},
+      {"title": "Sherwani outfit", "category": "traditional", "image": "./images/Clothes/traditional/c2.jpg"},
+      {"title": "Ethnic kurta with jacket", "category": "traditional", "image": "./images/Clothes/traditional/c3.jpg"},
+      {"title": "Wedding kurta set", "category": "traditional", "image": "./images/Clothes/traditional/c4.jpg"},
+      {"title": "Festive wear kurta", "category": "traditional", "image": "./images/Clothes/traditional/c5.jpg"},
+      {"title": "Indo-western outfit", "category": "traditional", "image": "./images/Clothes/traditional/c6.jpg"},
+      {"title": "Silk kurta", "category": "traditional", "image": "./images/Clothes/traditional/c7.jpg"},
+      {"title": "Pathani suit", "category": "traditional", "image": "./images/Clothes/traditional/c8.jpg"},
+      {"title": "Bandhgala suit", "category": "traditional", "image": "./images/Clothes/traditional/c9.jpg"},
+      {"title": "Designer ethnic wear", "category": "traditional", "image": "./images/Clothes/traditional/c10.jpg"}
+    ]
+
+  };
+
+
+    seachBtn.addEventListener("click", () => {
+
+        let input = clothSearch.value.trim().toLowerCase();
+
+        // Empty input check
+        if (input === "") {
+            alert("Please enter something");
+            return;
+        }
+
+        let suggestion = data[input];
+
+        // Clear old result
+        resultDiv.innerHTML = "";
+
+        // Invalid category
+        if (!suggestion) {
+            resultDiv.innerHTML = "<p>No data found 😢</p>";
+            return;
+        }
+
+        // Show all items
+        suggestion.forEach(item => {
+            resultDiv.innerHTML += `
+                <div style="border:1px solid #ccc; padding:10px; margin:10px;">
+                    <h3>${item.title}</h3>
+                    <p>Category: ${item.category}</p>
+                    <img src="${item.image}" width="150">
+                </div>
+            `;
+        });
+
+    });
+
+    // Enter key support
+    clothSearch.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+            seachBtn.click();
+        }
+    });
+
+});
+
+    </script>
+
+</body>
+</html>
