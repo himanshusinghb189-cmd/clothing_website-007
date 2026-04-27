@@ -92,7 +92,7 @@ html , body{
 
                           /* ? HOME PAGE */
 .hero-section{
-    background-image: url(../images/hero4.png);
+    background-image: url(hero4.png);
     height: 90vh;
     width: 100%;
     background-size: cover;
@@ -121,7 +121,7 @@ html , body{
 }
 
 .hero-section a{
-    background-image: url(../images/button.png);
+    background-image: url(button.png);
     background-color:   transparent;
     text-decoration: none;
     border: none;
@@ -274,7 +274,7 @@ color: rgb(161, 161, 2);
     height: 300px;
     width: 100%;
     color: white;
-    background-image: url(../images/banner/b2.jpg);
+    background-image: url(banner/b2.jpg);
     margin-bottom: 4rem;
     margin-top: 4rem;
 }
@@ -327,7 +327,7 @@ color: rgb(161, 161, 2);
     height: 300px;
     width: 100%;
     color: white;
-    background-image: url(../images/banner/b17.jpg);
+    background-image: url(banner/b17.jpg);
     margin-bottom: 4rem;
     margin-top: 4rem;    
     mask-repeat: no-repeat;
@@ -362,7 +362,7 @@ color: rgb(161, 161, 2);
     height: 300px;
     width: 100%;
     color: white;
-    background-image: url(../images/banner/b10.jpg);
+    background-image: url(banner/b10.jpg);
     margin-bottom: 4rem;
     margin-top: 4rem;    
     mask-repeat: no-repeat;
@@ -399,7 +399,7 @@ color: rgb(161, 161, 2);
 
 .very-small-banner .vs-banner1{
     height: 250px;
-    background-image: url(../images/banner/b7.jpg);
+    background-image: url(banner/b7.jpg);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -442,7 +442,7 @@ color: white;
 }
 
 .very-small-banner .vs-banner2{
-    background-image: url..(/images/banner/b4.jpg);
+    background-image: url..(banner/b4.jpg);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -464,7 +464,7 @@ color: white;
 
 .very-small-banner .vs-banner3{
     /* height: 250px; */
-    background-image: url(../images/banner/b17.jpg);
+    background-image: url(banner/b17.jpg);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -608,7 +608,7 @@ gap: 5px;
 /* ? Shop Hero Section Start from here */
 
 .shop-hero-section{
-    background-image: url(../images/banner/b1.jpg);
+    background-image: url(banner/b1.jpg);
     height: 45vh;
     width: 100%;
     color: white;
@@ -760,7 +760,7 @@ width: 50px;
 
 /* ? Blog Section  */
 .blog-hero-section{
-    background-image: url(../images/banner/b19.jpg);
+    background-image: url(banner/b19.jpg);
     /* height: 45vh; */
     height: 300px;
     /* width: 100%; */
@@ -841,7 +841,7 @@ width: 50px;
 
 /* ? About Section  */
 .about-hero-section{
-    background-image: url(../images/About/banner.png);
+    background-image: url(About/banner.png);
     /* height: 45vh; */
     height: 300px;
     /* width: 100%; */
@@ -1045,7 +1045,7 @@ width: 50px;
 
 /* ? Cart section  */
 .cart-hero-section{
-    background-image: url(../images/About/banner.png);
+    background-image: url(About/banner.png);
     /* height: 45vh; */
     height: 300px;
     /* width: 100%; */
