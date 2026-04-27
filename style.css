@@ -121,7 +121,7 @@ html , body{
 }
 
 .hero-section a{
-    background-image: url(/images/button.png);
+    background-image: url(images/button.png);
     background-color:   transparent;
     text-decoration: none;
     border: none;
